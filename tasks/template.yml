@@ -7,5 +7,5 @@
     owner: root
     group: root
     mode: "0644"
-  when: manala_motd_template
-        or manala_motd_message
+  when: ( manala_motd_template | length > 0 ) 
+        or ( manala_motd_message | length > 0 )
